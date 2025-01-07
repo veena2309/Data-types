@@ -1,0 +1,52 @@
+Data types:
+Dynamic type language
+2 types:
+1)primitive data type
+2)non primitive datatype
+To check the data type-type of
+1)primitive datatype: predefined ; we can store single values
+1)numbers: integers, floats
+2)string: stream of characters enclosed in quotes—single, double, backtick quotes;
+3)Boolean: true or false
+4)null : empty value or no value
+5)undefined: --declared variable with no value
+2)string: stream of characters enclosed in quotes—single, double, backtick quotes;
+Ex:1,-1,4.6,3
+a.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body>
+    <script>
+        let i="hema"
+        let j="veena"
+        console.log(i,j)
+        console.log("hi+$(i+j)")
+        document.write((i+j+"<br>"))
+        document.write(i,"<br>",j)
+
+    </script>
+</body>
+</head>
+</html>
+b.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body>
+    <script>
+        let a=3.5
+        let b='3.5'
+        document.write(a+b , "<br>")
+        console.log("hi + a+b")
+        document.write("hi + a+b", "<br>")
+        console.log(hi + ${a+b})
+        document.write(hi + ${a+b})
+       </script>
+</body>
+</head>
+</html>
+Output:
+3.53.5
+hi + a+b
+hi + 3.53.5
