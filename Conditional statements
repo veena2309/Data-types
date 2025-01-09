@@ -1,0 +1,96 @@
+09-01-2025
+
+CONDITIONAL STATEMENTS:--
+ *used to decide whether code has to be executed or skipped based on condition.
+ *To make the set of instructions(block of code)(conditional block) execute only when the given condition is true.
+ *Execute in a seq (line-by-line)
+ 
+Block of code:- 
+*Set of instructions
+*it will execute only when the specific condition is true
+
+Condition:- 
+*An expression that evaluates a result(True or False)
+*Ex:-console.log(5>6)
+
+There are 5 METHODS to write conditional statements.
+--if
+--if -else
+--else if
+--switch
+-terinary operator
+
+1."IF":--
+ *only one possible condition.
+ *If given condition is True it will execute otherwise it will be skipped.
+ **Syntax:- 
+           if(condition){
+            --block of code
+           }
+ **Example:-
+    INPUT:-
+	<script>
+        let a=5
+        let b=6
+        if(a<b){
+            document.write("Hello World")
+        }
+	document.write("Brilliant Veena")
+	</script>
+   OUTPUT:-
+	   Hello World
+	   Brilliant Veena
+
+
+2."ELSE":--
+  **Example:-
+   *INPUT:- <script>
+        let a=5
+        let b=6
+        if(a>b){
+            document.write("Hello World","<br>")
+        }
+        else{
+             document.write("hi Lucky","<br>")
+        }
+        document.write("brilliant Veena")
+        </script>
+  *OUTPUT:-
+          hi lucky
+          brilliant veena
+
+
+3."ELSE IF":--
+ **EXAMPLE 1:-
+   INPUT:- <script>
+        let age=prompt("Enter your age?")
+        let name=prompt("enter your name?")
+        if(age<18){
+            alert(name+"you are too young to marry")
+        }
+        else if(age>35){
+            alert(name+"you are too old to marry")
+        }
+        else{
+            alert(name+"perfect age to marry")
+        }
+        </script>
+   **OUTPUT:- 
+	   Veena perfect age to marry
+
+**EXAMPLE 2:-
+ INPUT:- <script>
+        let a=prompt("Enter a score: ")
+        let b=prompt("Enter b score: ")
+        let c=a+b
+        if((a>300 || b>300) && (c<500)){
+                alert("valid to team up")
+        }
+        else{
+            alert("not valid to team up")
+        }
+        </script>
+	      
+ OUTPUT:-      
+	not valid to team up
+           
