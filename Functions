@@ -1,0 +1,85 @@
+23-01-2025
+
+**FUNCTIONS**
+*A Function is reusable block of code.
+*It can be any where program.
+--Reusable code:- *using an existing code with out writing it ever we need.
+                  *You can use the same code with different arguments to get the results.
+
+**JAVA SCRIPT**
+key -word = function
+()
+Parameters=values(variables) which are declared inside the () while defining a functions.
+Arguments:- values which are passed through the Parameters at the time of calling the function.
+#Syntax:-
+function greet(name)
+
+Example 1:-
+INPUT:-<script>
+        function greet(){
+            document.write( "Hello Abdul" )
+        }
+        greet()
+        document.write( "hi yashu" )
+        greet()
+        document.write( "hi varra" )
+        greet()
+    </script>
+OUTPUT:-Hello Abdul hi yashu Hello Abdul hi varra Hello Abdul
+
+Example 2:--
+INPUT:- <script>
+        function greet(){
+            document.write( "Hello Abdul" )
+        }
+        greet()
+	</script>
+OUTPUT:- Hello Abdul
+
+Example 3:--Function to print the sum of 2 numbers.
+INPUT:- <script>
+        let a=parseInt(prompt("Enter a:"))
+        let b=parseInt(prompt("Enter b:"))
+        sum(a,b)
+function sum(a,b){
+           document.write("Sum is", (a+b))
+        }
+    </script>
+OUTPUT:- Sum is 16
+
+Example4:--
+INPUT:- <script>
+	function a(aa ,bb){
+    	return aa+bb;
+}
+let n1=parseFloat(prompt("enter a number1"))
+let n2=parseFloat(prompt("enter a number2"))
+let result=a(n1,n2);
+document.write("The sum is:"+result)
+</script>
+
+OUTPUT:-
+The sum is:5
+
+***ANONYMOUS FUNCTION:-
+ *A function without name, After we create a function without name and we assign it to a variable.
+Example:-
+INPUT:-
+<Script>
+sum= function(n1,n2){
+let r=n1+n2
+return r
+}
+document.write(sum(8,9))
+</script>
+
+OUTPUT:-17
+
+***Important programs to do***:--
+#write a program to check given number is prime or not
+# 0 1 1 2 3 5 8 13 =fibnocci series
+#leap year
+#armstrong number
+#palidron number #1 21 # 1 2 1
+#Pattern
+#1 2 6=#1^3+2^3+6^3
