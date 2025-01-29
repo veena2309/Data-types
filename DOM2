@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            color: blue;
+        }
+        .c{
+            color: red;
+        }
+        .a{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="b" Id="id1">mallesh</h1>
+    <h1 class="a">venkat</h1>
+    <h1 class="c">ramya</h1>
+    <h1 class="a">hari</h1>
+    <h1 class="b">anusha</h1>
+    <h1 class="c">josh</h1>
+    <h1 class="a">liki</h1>
+    <h1 class="b">pooj</h1>
+    <script>
+        let x=document.getElementById("id1")
+        console.log(x)
+        let y=document.getElementsByClassName("a")
+        console.log(y)
+        for(let j=0;j<y.length;j++){
+            console.log(y[j])
+        }
+        let z=document.getElementsByTagName("h1")
+        console.log(z)
+        for(let i=0;i<z.length;i++){
+            console.log(z[i])
+        }
+        let b=document.querySelector('h1');
+        console.log(b)
+        let bb=document.querySelectorAll('h1');
+        console.log(bb)
+
+        let t=document.createElement("h2");
+        t.className='tt'
+        t.textContent="jyoshna"
+        t.color="pink"
+        document.write(t)        
+        const v=["ammulu","josh","joshna"]
+        for(let k=0;k<v.length;k++){
+            let h=document.createElement("h3");
+            h.className="aa"
+            h.textContent=v[k];
+            h.color="green";
+            console.log(h)
+        }
+        let title;
+        for(let p=0;p<3;p++){
+            title=document.createElement("h1");
+            title.className='p'
+            title.style.fontSize='13px'
+            title.textContent=p;
+            console.log(p)
+            document.write(p)
+        }
+    </script>
+</body>
+</html>
