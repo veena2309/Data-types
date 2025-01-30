@@ -1,0 +1,83 @@
+Remove Child() – to remove the elements , Remove child elements from parent node
+ Ex:
+ 
+<h1> Removing the child element</h1>
+<h2> I am in hyd </h2>
+<ul>
+<li> Harshitha </li>
+<li>  Manvitha </li>
+</ul>
+<script>
+const ul = document.querySelector("ul")
+const lists = document.querySelectorAll("li")
+document.write(ul)
+document.write(lists)
+for(const list of lists){
+document.write(Removing: ${list.textContent})
+ul.removeChild(list)
+document.write(list)
+document.write(lists)
+}
+ OUTPUT :
+Removing the child element
+I am in hyd
+[object HTMLUListElement][object NodeList]Removing: Harshitha [object HTMLLIElement][object NodeList]Removing: Manvitha [object HTMLLIElement][object NodeList]
+
+EX 2 :
+
+<h1> Removing the child element</h1>
+<h2> I am in hyd </h2>
+<ul>
+<li> Harshitha </li>
+<li>  Manvitha </li>
+</ul>
+<script>
+const ul = document.querySelector("ul")
+const lists = document.querySelectorAll("li")
+console.log(ul)
+console.log(lists)
+for(const list of lists){
+console.log(Removing: ${list.textContent})
+ul.removeChild(list)
+console.log(list)
+console.log(lists)
+}
+
+OUTPUT :
+Removing the child element
+I am in hyd
+
+EX:
+<head>
+</head>
+<body>
+    <div id="a">
+        <h1>Guna</h1>
+        <h1>Ashish</h1>
+        <h1>Chiru</h1>
+    </div>
+    <div id="b">
+        <h2>Hema</h2>
+        <h2>Purushotham</h2>
+        <h2>Harshitha</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='Guru'
+
+        let p=document.getElementById('b')
+        p.appendChild(n)
+
+        console.log(p.innerText)
+    </script>
+</body>
+</html>
+
+OUTPUT :
+Guna
+Ashish
+Chiru
+Hema
+Purushotham
+Harshitha
+Guru
