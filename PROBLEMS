@@ -1,0 +1,90 @@
+EXAMPLE1:-
+INPUT:- <script>
+        let a=parseInt(prompt("Enter ur age"))
+        let b=prompt("Enter ur citizenship")
+        let c=prompt("citizenship passsed (yes)/(no)")
+        if(a>=18){
+            if(b=="citizen" || c=="yes"){
+                alert("You are eligible to vote")
+            }
+           
+            else{
+                alert("You need to take the citizenship")
+            }
+        }
+        else{
+            alert("You are not eligible to vote")
+        }
+    </script>
+
+OUTPUT:- You are eligible to vote.
+
+EXAMPLE2:-
+INPUT:-
+<SCRIPT>
+let m=parseInt(prompt("enter the amount"))
+        let d=prompt("premium or not")
+        if(m>100){
+            if(d=="yes"){
+                alert("You are eligible for 25% discount")
+                console.log(100-(100*0.25))
+            }else{
+            alert("You are eligible for 20% discount")
+            console.log(100-(100*0.2));
+            document.write(100-(100*0.2))
+            }
+        }
+        else if(m>50 && m<=100){
+            if(d=="yes"){
+                alert("You are eligible for 15% discount")
+                console.log(100-(100*0.15))
+            }else{
+            alert("You are eligible for 10% discount")
+            console.log(100-(100*0.1));
+            document.write(100-(100*0.1))
+            }
+        }
+        else{
+            alert("You are not eligible for any discount")
+        }
+</SCRIPT>
+
+OUTPUT:-You are eligible for 20% discount
+
+EXAMPLE3:-
+INPUT:- <script>
+    //a customer who spends more than 100 gets 20% off
+    //a customer who spends more than 50 rupees but less than or equal to 100 gets a 10% discount
+    //if the customer is premium member they receive an extra 5% discount
+    let total = parseFloat(prompt("Enter the total amount"))
+    let isPremium = confirm("Are you a premium member?")
+    
+    let isEligible = false
+    let discount = 0
+    if( total>100){
+        isEligible = true
+        discount = 0.2
+    }else if( total>50 && total<=100){
+        isEligible = true
+        discount = 0.1
+    }
+    if(isEligible && isPremium){
+        discount += 0.05
+    }
+    if(isEligible){
+        let discountAmount = total * discount
+        let remainingAmount = total - discountAmount
+        document.write("You are eligible for a discount of " + discount*100 + "%")
+        document.write("<br>Original  Amount: " + total)
+        document.write("<br>Discount Amount: " + discountAmount)
+        document.write("<br>Remaining Amount: " + remainingAmount)
+    }else{
+        document.write("You are not eligible for a discount")
+    }
+</script>
+
+OUTPUT:-
+You are eligible for a discount of 25%
+Original Amount: 20000
+Discount Amount: 5000
+Remaining Amount: 15000
