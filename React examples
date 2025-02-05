@@ -1,0 +1,111 @@
+Example1:-
+<script>
+       const b=React.createElement('h1',{id:'c'},"I am ravi");
+       const e=document.getElementById('a')
+       const root =ReactDOM.createRoot(e)
+       root.render(b)
+    </script>
+
+JSX:-
+--JavaScript XML
+--It's a syntax extension for javascript
+--jsx allows us to write HTML code in react js
+--jsx all the html tags must be closed.
+--jsx translates html code to js.
+--Babel is a tool in jsx;
+
+Example2:-
+INPUT:- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Example</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"></div>
+    <script type="text/babel">
+        const element = <h1 className="aa">Welcome to Hyderabad</h1>;
+        const e = document.getElementById('a');
+        const root = ReactDOM.createRoot(e);
+        root.render(element);
+    </script>
+</body>
+</html>
+OUTPUT:- Welcome to Hyderabad
+
+
+EXPRESSIONS:{}
+EXAMPLE:-
+INPUT:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Example</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"></div>
+    <script type="text/babel">
+        const n=5
+        const m=<h1>React is {n*2}better than JSX</h1>
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(m)
+    </script>
+</body>
+</html>
+
+OUTPUT:- React is 10better than JSX
+
+
+CONDITIONAL RENDERING:-
+EXAMPLE:-
+INPUT:
+<div id="root"></div>
+    <script type="text/babel">
+        const App=()=>{
+            const isLoggedIn=true;
+            return(
+            <div>
+                {isLoggedIn?(<h1>Welcome back,user</h1>):(<h1>Please Login</h1>)}
+                {isLoggedIn &&<h1>you have a new notification</h1>}
+            </div>
+            )
+        }
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+OUTPUT:- 
+Welcome back,user
+you have a new notification.
+
+
+FUNCTIONS:-
+using a function call:-
+you can use a function call directly with in the JSX expression.
+EXAMPLE:
+INPUT:-
+<div id="a"></div>
+    <script type="text/babel">
+        function getGreeting(name){
+            return `Hello,${name}!Welcome to Rect`
+        }
+        function Greeting(){
+            const name="veena"
+            return<h1>{getGreeting(name)}</h1>
+        }
+        //calling the getGreeting function in jsx
+        //create a root and render the component
+        const root =ReactDOM.createRoot(document.getElementById('a'))
+        root.render(<Greeting/>)
+    </script>
+OUTPUT:- Hello,veena!Welcome to React
