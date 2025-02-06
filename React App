@@ -1,0 +1,51 @@
+PROJECT FOLDER:-
+ *Public/index.html:- The main hrml file that serves as the entry point for the app.
+ *scr/index.js:- The javascript entry point for the react app where the DOM is rendered.
+ *scr/App.js:- The main component that serves as the root of the component tree.
+ *scr/components:- A folder to store reusable components.
+   
+1) Components:- (core building blocks of a react application)
+     --They help us to create reusable block of code.
+     --if anything goes wrong in UI, it's very easy to findout and solve that.
+EXAMPLE:--
+ **Welcome.jsx:- 
+import React from "react";
+const Greeting=()=>{
+    return <h1 className="greetingcss">Hello World!!</h1>
+}
+export default Greeting;
+
+**App.css:-
+ .message{
+  color: rgb(98, 0, 255);
+  background-color: aquamarine;
+  font-size: 40px;
+  text-align: center;
+  width: 30%;
+}
+.greetingcss{
+color: black;
+background-color: chartreuse;
+font-size: medium;
+text-align: center;
+}
+
+**App.js:--
+import React from "react";
+import './App.css'
+import Greeting from "./components/welcome";
+const Welcome=()=> <h1 className="message"> Hello Veena </h1>
+
+function App() {
+  return (<div className="App">
+    <Welcome/>
+    <Greeting/>
+  </div>)
+}
+export default App;
+ 
+**Keep index.js and index.css same(no changes).
+
+OUTPUT:- 
+Hello Veena
+Hello World!!
