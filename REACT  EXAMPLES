@@ -1,0 +1,68 @@
+EXAMPLE1:-
+Greeting.js:-
+import React from "react";
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1> Welcome Back!</h1>
+    }else{
+        return <h1>Please Login</h1>
+    }
+}
+export default Greeting;
+
+App.js:-
+import React from "react";
+import Greeting from "./greeting";
+import FruitList from "./components";
+const Welcome=()=> <h1 className="message"> Hello Veena </h1>
+function App() {
+  return (<div className="App">
+    <Welcome/>
+    <Greeting/>
+  </div>)
+}
+export default App;
+
+Output:-
+Hello Veena
+Please Login
+
+EXAMPLE2:-
+
+FruitList.js:-
+import React from "react";
+const FruitList=()=>{
+    const fruits = ['apple','cherry','orange','grapes'];
+    return(
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map((fruit,index)=>(
+                    <li key={index}>{fruit}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+export default FruitList;
+
+App.js:-
+import React from 'react';
+import "./App.css"
+import FruitList from './fruits';
+
+const App=()=>{
+  return(
+    <div className="">
+      <FruitList/>
+    </div>
+  )
+}
+export default App;
+
+OUTPUT:-
+Fruits List
+*apple
+*cherry
+*orange
+*grapes
