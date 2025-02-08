@@ -1,0 +1,63 @@
+WHY STATE IS IMPORTANT:-
+*It allows us the component to remember things
+Ex:- if you click a button to change a color;
+   the state will store hold the color and show on the screen
+
+1)FUNCTIONAL COMPONENTS:-
+  *********************
+*Syntax:- Const[statevariable,setStatfunction]=useState(initialValue)
+*statevariable:- holds the current state(ex:name,color)
+*setStatefunction:- A function which is used to update the state
+*initial Value:- The initial value of the state variable when the component first renders.
+
+CODE:-
+******
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(159, 71, 71);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;   
+       }
+       .lightbulb{
+        width: 200px;
+        height: 400px;
+       }
+       .btn{
+        height: 30px;
+        padding: 5px;
+        color: rgb(12, 127, 140);
+        font-size: large;
+        cursor: circle;
+       }
+         </style>   
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="lightbulb"id="bulb" alt="">
+    <button class="btn"id="btnid" onclick="toggleLight()">Turn on</button>
+    <script>
+        let isOn=false;
+        function toggleLight(){
+            const body=document.getElementById("body")
+            const bulb=document.getElementById("bulb")
+            const btn=document.getElementById("btnid")
+            isOn=!isOn;
+            if(isOn){
+                bulb.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+                btn.innerText="Turn Off";
+                body.style.backgroundColor="light";
+            }else{
+                body.style.backgroundColor="grey";
+                bulb.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+                btn.innerText="Turn On";
+            }
+        }
+    </script>
+</body>
