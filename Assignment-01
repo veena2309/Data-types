@@ -1,0 +1,55 @@
+				ASSIGNMENT-01:-
+Q1. Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples.
+ANS:-* In software programming, data type refers to the type of value a variable has and what type of mathematical, relational or logical operations can be applied without causing an error. For example, many programming languages use the data type string to classify text, integer to identify whole numbers and floating point to designate numbers with decimal points.
+*A data type defines the kind of value that can be stored in a variable and the operations that can be performed on that value.
+There are two main categories of data types:-
+Primitive Data Types
+Non-Primitive Data Types
+
+1. Primitive Data Types:-
+*Primitive data types are the most basic types of data that are supported by a programming language. They represent single values and have a predefined size and behavior. These types cannot be broken down into simpler data types.
+Common Primitive Data Types (with examples):-
+*Integer (int): Represents whole numbers.
+Example: 5, -2, 100
+*Floating-point (float): Represents numbers with decimal points.
+Example: 3.14, -0.001, 2.0
+*Character (char): Represents a single character, such as a letter, digit, or symbol.
+Example: 'A', '9', '#'
+*Boolean (bool): Represents a true/false value.
+Example: True, False
+*String (string): Represents a sequence of characters (often considered a primitive in some languages).
+Example: "Hello", "123", "aBc"
+
+2. Non-Primitive Data Types:-
+*Non-primitive data types are more complex and are built from primitive data types. These types allow you to store collections of values or more structured data. Non-primitive data types are often referred to as reference types because they store references (or pointers) to the data rather than the actual data itself.
+Common Non-Primitive Data Types (with examples):
+*Array: A collection of elements, all of the same type, stored in a contiguous block of memory.
+Example:
+int[] arr = {1, 2, 3, 4} (Array of integers)
+string[] names = {"Alice", "Bob", "Charlie"} (Array of strings)
+List (in languages like Python, Java, etc.): A collection of elements that can grow or shrink dynamically.
+Example:
+In Python: names = ["Alice", "Bob", "Charlie"]
+In Java: List<Integer> numbers = new ArrayList<>();
+Object: An instance of a class. Objects can contain fields (variables) and methods (functions).
+Example:
+In Python: class Person: name = "John"
+person = Person()
+*Set: A collection of unique elements (no duplicates allowed).
+Example:
+In Python: fruits = {"apple", "banana", "cherry"}
+*Dictionary/Map: A collection of key-value pairs where each key is unique.
+Example:
+In Python: student = {"name": "Alice", "age": 20}
+In JavaScript: let student = {name: "Alice", age: 20};
+
+Summary:-
+**Primitive Data Types:
+Simple and basic.
+Have a fixed size and behavior.
+Examples: int, float, char, bool, string.
+**Non-Primitive Data Types:
+More complex and can store collections of values.
+Examples: Arrays, Lists, Sets, Dictionaries, Objects.
+Both data types are essential in programming, and understanding their differences helps you choose the right one for different situations.
+
