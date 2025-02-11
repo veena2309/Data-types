@@ -1,0 +1,47 @@
+**APP.CSS:-
+.profile-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+**APP.JS:-
+import './App.css';
+import ProfileCard from './components/ProfileCard';
+function App(){
+  return(
+    <div className='App'>
+      <ProfileCard name="Veena"greeting="Good Morning"imagesrc="https://randomuser.me/api/portraits/men/2.jpg"/>
+    </div>
+  )
+}
+export default App;
+
+**ProfileCard:-
+import React from "react";
+const ProfileCard=({name,greeting,imagesrc})=>{
+    return(
+        <div className="profile_card">
+            <h1>{name}</h1>
+            <h2>{greeting}</h2>
+            <img src={imagesrc} alt=""/>
+        </div>
+    );
+}
+export default ProfileCard;
