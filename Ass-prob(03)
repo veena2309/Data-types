@@ -1,0 +1,147 @@
+
+*Props(properties) in React are used to pass data from parent component to child component.
+*Prop(Drilling) is the process of passing data from parent component to deeply (nested) child component through intermediate components,by passing data as props at each level of parent.
+
+EXAMPLE1:-
+import React,{createContext,useContext} from'react';
+import './App.css';
+const DataContext=createContext()
+function User1({data}){
+  return (
+    <div>
+      <h1><User2 data={data}/></h1>
+    </div>
+  )
+}
+function User2(){
+  return <User3/>
+}
+function User3(){
+  return <User4 />
+}
+function User4(){
+  const data =useContext(DataContext)
+  return <div>{data}</div>
+}
+function App(){
+  const data="Iam josh";
+  return (
+    <div className="App">
+    <DataContext.Provider value={data}>
+      <User1/>
+    </DataContext.Provider>
+    </div>
+  )
+}
+export default App;
+
+
+EXAMPLE2:-
+//parent component
+function App(){
+  const data ="I am Veena";
+  return(
+    <div className="App">
+      <User1 data={data}/>
+    </div>
+  )
+}
+//user1 component
+function User1({data}){
+  return <User2 data={data}/>
+}
+//user2 component
+function User2({data}){
+  return <User3 data={data}/>
+}
+//user3 component
+function User3({data}){
+  return <User4 data={data}/>
+}
+//user4 component
+function User4({data}){
+  return <div>{data}</div>
+}
+export default App;
+
+***React Assignment on React Context:-***
+Imagine you're building an app that displays the details of a user's profile. The data about the user includes their name and email. The App Component will pass this user data to a deeply nested child component called Profile.
+In this assignment, you will:
+1.use Prop Drilling to pass the data from App to Profile.
+2.use React Context to pass the data directly to profile without going through each component.
+
+ANSWER:-
+import React, { createContext, useContext } from "react";
+
+// Creating UserContext for the second approach
+const UserContext = createContext();
+
+// Sample user data
+const user = {
+  name: "Sree Veena",
+  email: "Veena@example.com",
+};
+
+// Approach 1: Prop Drilling
+const ProfileWithProps = ({ name, email }) => (
+  <div>
+    <h2>Profile (Prop Drilling)</h2>
+    <p>Name: {name}</p>
+    <p>Email: {email}</p>
+  </div>
+);
+
+const MiddleComponentWithProps = ({ name, email }) => (
+  <ProfileWithProps name={name} email={email} />
+);
+
+const AppWithPropDrilling = () => (
+  <div>
+    <h1>Using Prop Drilling</h1>
+    <MiddleComponentWithProps name={user.name} email={user.email} />
+  </div>
+);
+
+// Approach 2: React Context
+const ProfileWithContext = () => {
+  const { name, email } = useContext(UserContext);
+  return (
+    <div>
+      <h2>Profile (React Context)</h2>
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+    </div>
+  );
+};
+
+const MiddleComponentWithContext = () => <ProfileWithContext />;
+
+const AppWithContext = () => (
+  <UserContext.Provider value={user}>
+    <h1>Using React Context</h1>
+    <MiddleComponentWithContext />
+  </UserContext.Provider>
+);
+
+const App = () => (
+  <div>
+    <AppWithPropDrilling />
+    <hr />
+    <AppWithContext />
+  </div>
+);
+
+export default App;
+
+OUTPUT:-
+Using Prop Drilling
+Profile (Prop Drilling)
+Name: Sree Veena
+
+Email: Veena@example.com
+
+Using React Context
+Profile (React Context)
+Name: Sree Veena
+
+Email: Veena@example.com
