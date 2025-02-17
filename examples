@@ -1,0 +1,35 @@
+EXAMPLE1:
+APP.JS:--
+import React from "react";
+import './App.css';
+const handleClick=()=>{
+  alert('Button clicked');
+}
+const App = () =>{
+  return(
+    <div className="App">
+      <button onClick={handleClick}>click here</button>
+    </div>
+  );
+};
+export default App;
+
+EXAMPLE2:
+APP.JS:--
+
+import React,{useState} from "react";
+import './App.css';
+const App = () =>{
+  const[text,setText]=useState("")
+  const handleChange=(event)=>{
+    setText(event.target.value)
+  }
+  return(
+    <div className="App">
+      <input type="text" value={text} onChange={handleChange}/>
+      <p>Your text:{text}</p>
+    </div>
+  );
+};
+export default App;
+
